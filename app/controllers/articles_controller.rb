@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
+    FetchArticles::Articles.update_news
     @articles = Article.all
 
     render json: @articles
