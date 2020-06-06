@@ -1,24 +1,48 @@
-# README
+##### Prerequisites
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The setups steps expect following tools installed on the system.
 
-Things you may want to cover:
+- Github
+- Ruby [2.7.0] ( https://rvm.io/rvm/install )
+- Rails [6.0.3.1] ( https://rvm.io/rvm/install )
 
-* Ruby version
+##### 1. Check out the repository
 
-* System dependencies
+```bash
+git clone git@github.com:manojknayakk/testApi.git
+```
 
-* Configuration
+##### 2. Update database.yml file
 
-* Database creation
+Edit the database configuration in config/database.yml as per your local postgres credentials.
 
-* Database initialization
 
-* How to run the test suite
+##### 3. Create and setup the database
 
-* Services (job queues, cache servers, search engines, etc.)
+Run the following commands to create and setup the database.
 
-* Deployment instructions
+```ruby
+rake db:create
+rake db:setup
+```
 
-* ...
+##### 4. Start the Rails server
+
+You can start the rails server using the command given below.
+
+```ruby
+rails s
+```
+
+And now you can visit the site with the URL http://localhost:3000
+
+
+##### 5. To get all products
+
+you can visit the site with the URL http://localhost:3000/products
+
+
+##### 6. To get all news articles
+
+you can visit the site with the URL http://localhost:3000/articles
+
